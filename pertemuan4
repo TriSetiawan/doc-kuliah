@@ -1,0 +1,33 @@
+Ada banyak situs maupun lembaga yang sudah menyediakan data shapefile, misalnya seperti ESRI. Tapi file tersebut belum bisa kita lihat 
+hasilnya tanpa menggunakan aplikasi/software pembantu, misalnya QGIS dan python, shapefile terdiri dari 2 tipe yaitu file.shp dan file.dbf
+di dalam file shp itu sendiri terdapat geometri. Geometri memungkinkan kita untuk memahami ruang dalam sebuah kehidupan nyata yang dapat 
+membantu kitta dalam memahami konsep konsep yang lebih baik.
+
+Beberapa topik dasar dalam geometri adalah :
+1.	Point
+Data yang berupa titik
+
+2.	Polyline 
+Data yang berupa garis
+
+3.	Polygon
+Data yang berupa garis tapi titik awal dan akhirnya saling bertemu
+
+Pembahasan 
+Retrieve data geospasial berfungsi untuk melakukan select/view mulai dari data record file.dbf dilanjutkan ke file.shp untuk membaca 
+geometri
+
+Caranya adalah dengan meng-import file dan membaca file tersebut
+
+Membaca file.dbf
+-	Sf.records()
+-	Sf.records(n)
+Membaca file.shp
+-	Sf = shapefile.Reader(“namafile.shp”)
+-	Sf.shapes()
+-	A = sf.shapes()
+-	Len(a)
+
+Kesimpulan: :
+Jadi kesimpulannya data shp yang telah ada belum bisa dibaca dan dilihat tanpa adanya bantuan software pendukung untuk membaca file 
+tersebut.
